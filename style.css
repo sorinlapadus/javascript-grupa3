@@ -1,0 +1,77 @@
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#content {
+  display: flex;
+  flex-direction: row;
+}
+header, footer, #content {
+  padding: 4px;
+  margin: 2px;
+  border: 5px solid #2196F3;
+  background-color: #d3eafd;
+}
+#content div, #side-menu section {
+  padding: 4px;
+  margin: 2px;
+  border: 2px solid red;
+}
+#side-menu section {
+  border: 2px solid green;
+}
+#top-menu-bar {
+  text-align: center;
+  background-color: #334455;
+  color: #fff;
+  margin: 0;
+  padding-inline-start: 0;
+}
+#top-menu-bar li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+#top-menu-bar a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 15px 5px 15px;
+  color: #fff;
+}
+#top-menu-bar a:visited {
+  color: #fff;
+}
+#top-menu-bar a:hover {
+  color: #334455;
+  background: #fff;
+}
+.page {
+  flex: 1;
+  background-color: #ffffff;
+  margin: 0 0 10px 0;
+  padding: 24px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
+#header-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+h1 {
+  margin: 0;
+}
+header h2 {
+  margin: 0;
+}
+#my_picture img {
+  padding: 5px;
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+}
