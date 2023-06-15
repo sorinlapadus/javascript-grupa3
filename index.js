@@ -1,13 +1,19 @@
 function hideAllPages() {
-    document.getElementById('home').style.display = 'none';
-    document.getElementById('languages').style.display = 'none';
-    document.getElementById('projects').style.display = 'none';
-    document.getElementById('skills').style.display = 'none';
+    hide('home');
+    hide('languages');
+    hide('projects');
+    hide('skills');
 }
+
 function displayPage(id) {
     hideAllPages();
     var page = document.getElementById(id);
     page.style.display = 'block';
+}
+
+function hide(id) {
+    var page = document.getElementById(id);
+    page.style.display = 'none';
 }
 
 displayPage('home');
