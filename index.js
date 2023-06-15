@@ -1,25 +1,23 @@
 var activePage = "home";
 
+function $(selector) {
+  return document, document.querySelector(selector);
+}
+
 function displayPage(id) {
   hide(activePage);
-  document
-    .querySelector(`#top-menu-bar a[data-page="${id}"]`)
-    .classList.remove(activePage);
+  $(`#top-menu-bar a[data-page="${id}"]`).classList.remove(activePage);
   show(id);
-  document
-    .querySelector(`#top-menu-bar a[data-page="${id}"]`)
-    .classList.add("active");
+  $(`#top-menu-bar a[data-page="${id}"]`).classList.add("active");
   activePage = id;
 }
 
 function show(id) {
-  var page = document.getElementById(id);
-  page.style.display = "block";
+  $("#" + id).style.display = "block";
 }
 
 function hide(id) {
-  var page = document.getElementById(id);
-  page.style.display = "none";
+  $("#" + id).style.display = "none";
 }
 
 displayPage(activePage);
