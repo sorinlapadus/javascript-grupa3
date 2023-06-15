@@ -23,13 +23,13 @@ function hide(id) {
 function showSkillsList() {
   var ul = $("#skills ul");
   var skillsList = [
-    { name: "JS", favorite: true },
-    { name: "HTML", favorite: true },
-    { name: "CSS" },
+    { name: "JS", favorite: true, endorcements: 30 },
+    { name: "HTML", favorite: true, endorcements: 20 },
+    { name: "CSS", endorcements: 10 },
   ];
   var skillsHtml = skillsList.map(function (skill) {
     var className = skill.favorite ? "favorite" : "";
-    return `<li class="${className}">${skill.name}</li>`;
+    return `<li class="${className}">${skill.name} - <span>${skill.endorcements}</span></li>`;
   });
   ul.innerHTML = skillsHtml.join("");
 }

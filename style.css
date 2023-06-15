@@ -82,3 +82,7 @@ header h2 {
   height: 108px;
   border-radius: 50%;
 }
+
+#skills li span {
+  color: gray;
+}
