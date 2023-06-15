@@ -20,10 +20,10 @@ header, footer, #content {
 #content div, #side-menu section {
   padding: 4px;
   margin: 2px;
-  border: 2px solid red;
+  border: 0px solid red;
 }
 #side-menu section {
-  border: 2px solid green;
+  border: 0px solid green;
 }
 #top-menu-bar {
   text-align: center;
