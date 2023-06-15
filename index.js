@@ -22,9 +22,13 @@ function hide(id) {
 
 function showSkillsList() {
   var ul = $("#skills ul");
-  var skillsList = ["JS", "HTML", "CSS"];
+  var skillsList = [
+    { name: "JS", favorite: true },
+    { name: "HTML", favorite: true },
+    { name: "CSS" },
+  ];
   var skillsHtml = skillsList.map(function (skill) {
-    return `<li>${skill}</li>`;
+    return `<li>${skill.name}</li>`;
   });
   ul.innerHTML = skillsHtml.join("");
 }
