@@ -2,7 +2,13 @@ var activePage = "home";
 
 function displayPage(id) {
   hide(activePage);
+  document
+    .querySelector(`#top-menu-bar a[data-page="${id}"]`)
+    .classList.remove(activePage);
   show(id);
+  document
+    .querySelector(`#top-menu-bar a[data-page="${id}"]`)
+    .classList.add("active");
   activePage = id;
 }
 
