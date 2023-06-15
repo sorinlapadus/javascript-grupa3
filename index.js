@@ -1,13 +1,9 @@
-function hideAllPages() {
-  hide("home");
-  hide("languages");
-  hide("projects");
-  hide("skills");
-}
+var activePage = "home";
 
 function displayPage(id) {
-  hideAllPages();
+  hide(activePage);
   show(id);
+  activePage = id;
 }
 
 function show(id) {
@@ -20,4 +16,4 @@ function hide(id) {
   page.style.display = "none";
 }
 
-displayPage("home");
+displayPage(activePage);
