@@ -21,3 +21,14 @@ function hide(id) {
 }
 
 displayPage(activePage);
+
+$("#top-menu-bar").addEventListener("click", function clickOnMenu(e) {
+  if (e.target.matches("a")) {
+    var id = e.target.dataset.page;
+    if (id) {
+      displayPage(id);
+    } else {
+      console.warn("Please Use data-page attribute");
+    }
+  }
+});
