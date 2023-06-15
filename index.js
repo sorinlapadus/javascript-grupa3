@@ -20,13 +20,17 @@ function hide(id) {
   $("#" + id).style.display = "none";
 }
 
-function showSkillsList() {
+function getSkillsRequest() {
+  console.info("TODO: get skills from JSON");
+  fetch("skills.json").then(function (r) {
+    r.json().then(function (skillsList) {
+      showSkillsList(skillsList);
+    });
+  });
+}
+
+function showSkillsList(skillsList) {
   var ul = $("#skills ul");
-  var skillsList = [
-    { name: "JS", favorite: true, endorcements: 30 },
-    { name: "HTML", favorite: true, endorcements: 20 },
-    { name: "CSS", endorcements: 10 },
-  ];
   var skillsHtml = skillsList.map(function (skill) {
     var className = skill.favorite ? "favorite" : "";
     return `<li class="${className}">${skill.name} - <span>${skill.endorcements}</span></li>`;
@@ -45,4 +49,4 @@ $("#top-menu-bar").addEventListener("click", function clickOnMenu(e) {
     }
   }
 });
-showSkillsList();
+getSkillsRequest();
