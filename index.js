@@ -7,6 +7,10 @@ function hideAllPages() {
 
 function displayPage(id) {
   hideAllPages();
+  show(id);
+}
+
+function show(id) {
   var page = document.getElementById(id);
   page.style.display = "block";
 }
