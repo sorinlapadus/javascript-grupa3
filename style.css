@@ -60,6 +60,11 @@ header, footer, #content {
   border-radius: 2px;
   display:none;
 }
+
+.favorite {
+  font-weight: bold;
+  color: green;
+}
 #header-wrapper {
   display: flex;
   flex-direction: row;

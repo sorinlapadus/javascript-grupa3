@@ -28,7 +28,8 @@ function showSkillsList() {
     { name: "CSS" },
   ];
   var skillsHtml = skillsList.map(function (skill) {
-    return `<li>${skill.name}</li>`;
+    var className = skill.favorite ? "favorite" : "";
+    return `<li class="${className}">${skill.name}</li>`;
   });
   ul.innerHTML = skillsHtml.join("");
 }
