@@ -48,6 +48,7 @@ function showSkillsList(skillsList) {
     const className = skill.favorite ? "favorite" : "";
     return `<li class="${className}">${skill.name} - <span>${skill.endorcements}</span></li>`;
   });
+  skillsHtml.push("<li>...</li>");
   ul.innerHTML = skillsHtml.join("");
 }
 
