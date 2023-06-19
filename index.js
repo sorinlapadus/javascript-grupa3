@@ -22,14 +22,14 @@ function hide(id) {
 
 function getSkillsRequest() {
   console.info("TODO: get skills from JSON");
-  fetch("skills.json").then(function (r) {
+  fetch("skills.json").then((r) => {
     r.json().then(showSkillsList);
   });
 }
 
 function showSkillsList(skillsList) {
   const ul = $("#skills ul");
-  const skillsHtml = skillsList.map(function (skill) {
+  const skillsHtml = skillsList.map((skill) => {
     const className = skill.favorite ? "favorite" : "";
     return `<li class="${className}">${skill.name} - <span>${skill.endorcements}</span></li>`;
   });
