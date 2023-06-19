@@ -28,9 +28,9 @@ function getSkillsRequest() {
 }
 
 function showSkillsList(skillsList) {
-  var ul = $("#skills ul");
-  var skillsHtml = skillsList.map(function (skill) {
-    var className = skill.favorite ? "favorite" : "";
+  const ul = $("#skills ul");
+  const skillsHtml = skillsList.map(function (skill) {
+    const className = skill.favorite ? "favorite" : "";
     return `<li class="${className}">${skill.name} - <span>${skill.endorcements}</span></li>`;
   });
   ul.innerHTML = skillsHtml.join("");
@@ -39,7 +39,7 @@ function showSkillsList(skillsList) {
 displayPage(activePage);
 $("#top-menu-bar").addEventListener("click", function clickOnMenu(e) {
   if (e.target.matches("a")) {
-    var id = e.target.dataset.page;
+    const id = e.target.dataset.page;
     if (id) {
       displayPage(id);
     } else {
