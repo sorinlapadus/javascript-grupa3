@@ -21,10 +21,19 @@ function hide(id) {
 }
 
 function getSkillsRequest() {
-  console.info("TODO: get skills from JSON");
-  fetch("skills.json").then((r) => {
-    r.json().then(showSkillsList);
-  });
+  console.info("get skills from JSON");
+  fetch("skills.json")
+    .then((r) => {
+      r.json().then(showSkillsList);
+      return "ready";
+    })
+    .then((x) => {
+      console.info("x", x);
+      return 10;
+    })
+    .then((x) => {
+      console.info("x", x);
+    });
 }
 
 function showSkillsList(skillsList) {
