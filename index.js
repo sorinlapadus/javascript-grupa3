@@ -38,6 +38,12 @@ function getSkillsRequest() {
 
 function showSkillsList(skillsList) {
   const ul = $("#skills ul");
+
+  skillsList.sort((a, b) => {
+    // return a.name.localeCompare(b.name);
+    b.endorcements - a.endorcements;
+  });
+
   const skillsHtml = skillsList.map((skill) => {
     const className = skill.favorite ? "favorite" : "";
     return `<li class="${className}">${skill.name} - <span>${skill.endorcements}</span></li>`;
