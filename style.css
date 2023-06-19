@@ -86,3 +86,10 @@ header h2 {
 #skills li span {
   color: gray;
 }
+
+footer
+{
+    position:fixed;
+    bottom:0;
+    width: 100%;
+}
