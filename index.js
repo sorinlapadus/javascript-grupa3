@@ -23,9 +23,7 @@ function hide(id) {
 function getSkillsRequest() {
   console.info("TODO: get skills from JSON");
   fetch("skills.json").then(function (r) {
-    r.json().then(function (skillsList) {
-      showSkillsList(skillsList);
-    });
+    r.json().then(showSkillsList);
   });
 }
 
