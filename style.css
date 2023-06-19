@@ -11,20 +11,18 @@ body {
   display: flex;
   flex-direction: row;
 }
-header, footer, #content {
-  padding: 4px;
-  margin: 2px;
-  border: 0px solid #2196F3;
-  background-color: #d3eafd;
+
+#side-menu {
+  flex: 1;
 }
-#content div, #side-menu section {
-  padding: 4px;
-  margin: 2px;
-  border: 0px solid red;
+
+#main {
+  flex: 4;
+  padding: 10px 10px 5px 5px;
+  display: flex;
+  flex-direction: column;
 }
-#side-menu section {
-  border: 0px solid green;
-}
+
 #top-menu-bar {
   text-align: center;
   background-color: #334455;
@@ -58,7 +56,7 @@ header, footer, #content {
   padding: 24px;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
-  display:none;
+  display: none;
 }
 
 .favorite {
@@ -87,13 +85,9 @@ header h2 {
   color: gray;
 }
 
-footer
-{
-    position:fixed;
-    bottom:0;
-    width: 100%;
-    background-color: #057988;
-    display: flex;
+footer {
+  background-color: #057988;
+  display: flex;
 }
 footer .item {
   align-items: center;
@@ -115,4 +109,19 @@ footer a:hover {
   flex: 4;
   display: flex;
   flex-direction: row;
+}
+
+#languages table {
+  width: 50%;
+  min-width: 330px;
+  border-collapse: collapse;
+}
+#languages table th,
+#languages table td {
+  border: 1px solid #0798ab;
+  padding: 5px;
+}
+
+th {
+  background-color: #d1e7ea;
 }
