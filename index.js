@@ -52,8 +52,7 @@ function showSkillsList(skillsList) {
   ul.innerHTML = skillsHtml.join("");
 }
 
-displayPage(activePage);
-$("#top-menu-bar").addEventListener("click", function clickOnMenu(e) {
+function clickOnMenu(e) {
   if (e.target.matches("a")) {
     const id = e.target.dataset.page;
     if (id) {
@@ -62,5 +61,12 @@ $("#top-menu-bar").addEventListener("click", function clickOnMenu(e) {
       console.warn("Please Use data-page attribute");
     }
   }
-});
+}
+
+function initEvents() {
+  $("#top-menu-bar").addEventListener("click", clickOnMenu);
+}
+
+initEvents();
+displayPage(activePage);
 getSkillsRequest();
